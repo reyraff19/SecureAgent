@@ -30,10 +30,9 @@ export class PythonParser implements AbstractParser {
     const parser = new Parser();
     parser.setLanguage(Python);
 
-    // Parse the Python file into an AST
     const tree = parser.parse(file);
 
-    let largestEnclosingContext: null = null;
+    let largestEnclosingContext = null;
     let largestSize = 0;
 
     // Recursive function to traverse the AST
